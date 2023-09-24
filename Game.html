@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bubble_Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Poppins',sans-serif;
+        }
+        .cont{
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(169, 241, 169);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .panel{
+            height: 90%;
+            width: 80%;
+            background-color:white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .ptop{
+            height: 10%;
+            width: 100%;
+            background-color: rgb(83, 165, 83);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 30%;
+        }
+        .elem{
+            display: flex;
+            align-items: center;
+            gap: 20;
+        }
+        .box{
+            height: 40px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            margin: 10px;
+            color: rgb(18, 119, 57);
+            font-weight: 600;
+        }
+        h2{
+            padding: 14px 5px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .pbtm{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: calc(100% - 55px);
+            padding: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .circle{
+            height: 50px;
+            width: 50px;
+            background-color: rgb(61, 161, 61);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+        }
+        .circle:hover{
+            background-color: rgb(43, 110, 43);
+            color: white;
+            cursor: pointer;
+        }
+        .game{
+            color: white;
+            font-size: 3.5rem;
+            font-weight: 600;
+            animation: one;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transition: all ease-in;
+        }
+        @keyframes one {
+            from{
+                transform: translateY(-100px);
+            }
+            to{
+                transform: translateY(0px);
+                color: green
+            }
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="panel">
+            <div class="ptop">
+                <div class="elem">
+                    <h2>Hit</h2>
+                    <div class="box" id="hit">5</div>
+                </div>
+                <div class="elem">
+                    <h2>Timer</h2>
+                    <div class="box" id="timervalue">60</div>
+                </div>
+                <div class="elem">
+                    <h2>Score</h2>
+                    <div class="box" id="scoreval">0</div>
+                </div>
+            </div>
+            <div class="pbtm"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
